@@ -184,7 +184,7 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: 55px;
+    bottom: 90px;
     height: 43px;
     width: 100vw;
     background-color: #e8e6e4;
@@ -192,6 +192,7 @@
   }
 
   &__item {
+    margin-bottom: 35px;
     width: 23%;
     position: relative;
     z-index: 1;

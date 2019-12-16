@@ -73,9 +73,9 @@ button {
   height: 100%;
 }
 
-.content {
-  flex: 1 0 auto;
-}
+// .content {
+//   flex: 1 0 auto;
+// }
 
 .container {
   margin: 0 auto;
@@ -86,3 +86,5 @@ button {
 
 //Модули
 @import "modules/modules";
+@import "sections/advantages";
+@import "media";

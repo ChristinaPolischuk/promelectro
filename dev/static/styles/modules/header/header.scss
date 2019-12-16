@@ -4,9 +4,12 @@
 
   &__top {
     margin-bottom: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__contacts {
@@ -24,6 +27,7 @@
   }
 
   &__bottom {
-    padding-bottom: 35px;
+    overflow-x: hidden;
   }
+
 }
