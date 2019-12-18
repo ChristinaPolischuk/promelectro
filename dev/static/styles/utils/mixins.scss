@@ -1,11 +1,83 @@
-@mixin size($a,$b: $a) {
+@mixin size($a, $b: $a) {
   width: $a;
   height: $b;
 }
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  :-moz-placeholder {
+    @content
+  }
+
+  ::-moz-placeholder {
+    @content
+  }
+
+  :-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin icons($width, $height, $x, $y) {
+  background: url('../images/general/icons_sprite.png') no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: $width;
+  height: $height;
+  background-position: $x $y !important;
+  // text-indent: -9999px;
+  // text-align: left;
+  // overflow: hidden;
+}
+
+.repairs {
+  @include icons(48px, 36px, 0, 0);
+}
+
+.painting {
+  @include icons(45px, 48px, 0, -36px);
+}
+
+.bearings {
+  @include icons(40px, 46px, 0, -84px);
+}
+
+.winding {
+  @include icons(40px, 37px, 0, -130px);
+}
+
+.spares {
+  @include icons(36px, 30px, 0, -167px);
+}
+
+.restoration {
+  @include icons(32px, 31px, 0, -197px);
+}
+
+.card {
+  @include icons(27px, 25px, 0, -228px);
+}
+
+.delivery-icon {
+  @include icons(27px, 19px, 0, -253px);
+}
+
+.cashless {
+  @include icons(26px, 25px, 0, -272px);
+}
+
+.cash {
+  @include icons(25px, 23px, 0, -297px);
+  background-position: -0px -297px;
+  width: 25px;
+  height: 23px;
+}
+
+.imposed {
+  @include icons(25px, 26px, 0, -320px);
+  width: 25px;
+  height: 26px;
 }
