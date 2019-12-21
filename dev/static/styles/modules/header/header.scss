@@ -23,6 +23,15 @@
       font-weight: 400;
       line-height: 36px;
       letter-spacing: 2.6px;
+
+      &.company {
+        text-transform: uppercase;
+      }
+    }
+
+    &.mobile {
+      display: none;
+      text-align: left;
     }
   }
 
