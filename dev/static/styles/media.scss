@@ -187,6 +187,14 @@
       }
     }
   }
+
+  .delivery {
+    background-position: 70% center;
+
+    &__content {
+      margin: 0 auto;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -463,6 +471,24 @@
       }
     }
   }
+
+  .delivery {
+    padding: 50px 0;
+
+    &__title {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    &__descr {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -485,6 +511,10 @@
         bottom: -10px;
       }
     }
+  }
+
+  .delivery {
+    background-position: 67% center;
   }
 }
 
