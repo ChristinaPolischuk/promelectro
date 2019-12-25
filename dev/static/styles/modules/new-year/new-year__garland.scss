@@ -7,7 +7,8 @@
 }
 
 .b-page_newyear .b-head-decor {
-  position: absolute;
+  position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   display: block;
