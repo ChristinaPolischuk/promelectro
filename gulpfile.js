@@ -32,7 +32,7 @@ $.gulp.task('build', $.gulp.series(
     $.gulp.parallel(
         'pug',
         'fonts',
-        'styles:build-min',
+        'styles:build',
         'img:build',
         'new-year',
         'libsJS:build',

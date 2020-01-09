@@ -3,6 +3,7 @@ let plumber = require('gulp-plumber'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
     csscomb = require('gulp-csscomb'),
+    cleanCSS = require('gulp-clean-css'),
     sourcemaps = require('gulp-sourcemaps'),
     rename = require('gulp-rename'),
     stylesPATH = {
@@ -19,8 +20,14 @@ module.exports = function () {
             .pipe(autoprefixer({
                 overrideBrowserslist: ['last 8 version']
             }))
-            .pipe(sourcemaps.write())
+            //минификация
+            .pipe(
+                cleanCSS({
+                    level: 2
+                })
+            )
             .pipe(rename('styles.min.css'))
+            .pipe(sourcemaps.write())
             .pipe($.gulp.dest(stylesPATH.ouput))
             .on('end', $.browserSync.reload);
     });
@@ -41,6 +48,9 @@ module.exports = function () {
             }))
             .pipe(csscomb())
             .pipe(csso())
+            .pipe(cleanCSS({
+                level: 2
+            }))
             .pipe(rename('styles.min.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
     });

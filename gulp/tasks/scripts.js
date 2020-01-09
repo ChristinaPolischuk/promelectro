@@ -21,7 +21,8 @@ module.exports = function () {
 
     $.gulp.task('js:dev', () => {
         return $.gulp.src([scriptsPATH.input + '*.js',
-            '!' + scriptsPATH.input + 'libs.min.js'])
+                '!' + scriptsPATH.input + 'libs.min.js'
+            ])
             .pipe($.gulp.dest(scriptsPATH.ouput))
             .pipe($.browserSync.reload({
                 stream: true
@@ -30,13 +31,16 @@ module.exports = function () {
 
     $.gulp.task('js:build', () => {
         return $.gulp.src([scriptsPATH.input + '*.js',
-            '!' + scriptsPATH.input + 'libs.min.js'])
+                '!' + scriptsPATH.input + 'libs.min.js'
+            ])
+            .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput))
     });
 
     $.gulp.task('js:build-min', () => {
         return $.gulp.src([scriptsPATH.input + '*.js',
-            '!' + scriptsPATH.input + 'libs.min.js'])
+                '!' + scriptsPATH.input + 'libs.min.js'
+            ])
             .pipe(concat('main.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.ouput))
