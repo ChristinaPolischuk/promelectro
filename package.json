@@ -8,11 +8,11 @@
   },
   "author": "Christina Polishuk",
   "license": "MIT",
-  "homepage": "https://senyqy/github.io/promelectro",
+  "homepage": "https://senyqy/github.io/promelectro/our-team",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "gulp": "4.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cache": "^1.0.2",
