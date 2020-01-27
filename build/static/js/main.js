@@ -212,7 +212,6 @@ $(document).ready(function () {
 
     // Liquid button animation
 
-
     function _instanceof(left, right) {
         if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) {
             return !!right[Symbol.hasInstance](left);
